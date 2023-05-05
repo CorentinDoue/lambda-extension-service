@@ -1,0 +1,7 @@
+src
+.gitignore
+tsconfig.build.json
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+dist/tsconfig.build.tsbuildinfo

@@ -1,0 +1,52 @@
+{
+  "name": "lambda-extension-service",
+  "version": "0.0.1",
+  "author": "corentindoue",
+  "license": "MIT",
+  "repository": "CorentinDoue/lambda-extension-service.git",
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "Extension"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "package": "pnpm clean && pnpm package-transpile && pnpm package-types && pnpm package-types-aliases",
+    "package-transpile": "tsup",
+    "package-types": "tsc -p tsconfig.build.json",
+    "package-types-aliases": "tsc-alias -p tsconfig.build.json",
+    "watch": "pnpm clean dist && concurrently 'pnpm:package-* --watch'"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "@vitest/coverage-c8": "0.30.0",
+    "aws-cdk-lib": "^2.68.0",
+    "concurrently": "^7.6.0",
+    "constructs": "^10.1.187",
+    "dependency-cruiser": "^12.10.0",
+    "eslint": "^8.35.0",
+    "json-schema-to-ts": "^2.7.2",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.4.0",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.3",
+    "tsup": "^6.6.3",
+    "typescript": "^5.0.0",
+    "vite": "^4.1.4",
+    "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "0.30.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
