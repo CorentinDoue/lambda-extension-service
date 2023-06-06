@@ -53,4 +53,5 @@ A complete example can be found on [Example repository](https://github.com/Coren
 To fully understand the lambda extensions, I recommend reading or watching:
 - [Simplifying internal AWS Lambda APIs](https://danwakeem.medium.com/simplifying-internal-aws-lambda-apis-25a26ab9070e)
 - [Julian Wood Youtube video on the subject](https://www.youtube.com/watch?v=sAgUcJOwElU&ab_channel=ServerlessLand)
+- [Power up your serverless application with AWS Lambda extensions](https://dev.to/kumo/power-up-your-serverless-application-with-aws-lambda-extensions-3a31)
 
